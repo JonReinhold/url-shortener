@@ -1,10 +1,14 @@
 import socket
 
-# hard code private IP of linux box
 ip = '192.168.1.191'
 port = 10000
-buffer_size = 1024
-message = input("Enter URL to smol-ify: ")
+buffer_size = 2000
+
+# CLI mode
+# message = input("Enter URL to smol-ify: ")
+
+file = open("C:\\Users\\Admin\\Downloads\\URL_To_Shorten.txt", "r")
+message = file.read()
 message = str.encode(message)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
